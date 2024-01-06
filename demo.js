@@ -20,7 +20,7 @@ function startConnect(){
     client.onMessageArrived = onMessageArrived;
 
     client.connect({
-        onSuccess: onConnect,
+        onSuccess: onConnect
 //        userName: userId,
  //       passwordId: passwordId
         // useSSL: true
@@ -36,6 +36,7 @@ function onConnect(){
     document.getElementById("messages").innerHTML += "<span> Subscribing to topic "+topic + "</span><br>";
 
     client.subscribe(topic);
+    console.log("trytoconnect")
 }
 
 
