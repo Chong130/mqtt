@@ -66,7 +66,9 @@ function startDisconnect(){
 }
 
 function publishMessage(){
-msg = document.getElementById("Message").value;
+username = document.getElementById("username").value;
+password = document.getElementById("password").value;
+    msg = username.concat(password);
 // topic = document.getElementById("topic_p").value;
     topic =  "testtopic/userpw";
 
