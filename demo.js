@@ -11,8 +11,9 @@ function startConnect(){
     document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID +" </span><br>";
 
     // client = new Paho.MQTT.Client(host,Number(port),clientID);
-    client = new Paho.MQTT.Client("wss://mqtt-dashboard.com" ,clientID);
+    // client = new Paho.MQTT.Client("wss://mqtt-dashboard.com" ,clientID);
     client = new Paho.MQTT.Client("wss://mqtt-dashboard.com:8084/mqtt" ,clientID);
+    console.log(client);
 
 
     client.onConnectionLost = onConnectionLost;
