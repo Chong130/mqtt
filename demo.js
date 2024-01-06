@@ -36,7 +36,7 @@ function onConnect(){
     document.getElementById("messages").innerHTML += "<span> Subscribing to topic "+topic + "</span><br>";
 
     client.subscribe(topic);
-    console.log("trytoconnect")
+    console.log("trytoconnect");
 }
 
 
