@@ -20,7 +20,7 @@ function startConnect(){
         onSuccess: onConnect,
 //        userName: userId,
  //       passwordId: passwordId
-        useSSL: false
+        // useSSL: false
     });
 
 
