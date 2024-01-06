@@ -13,7 +13,7 @@ function startConnect(){
     // client = new Paho.MQTT.Client(host,Number(port),clientID);
     client = new Paho.MQTT.Client("wss://mqtt-dashboard.com:8884/mqtt" ,clientID);
     // client = new Paho.MQTT.Client("ws://broker.emqx.io:8083/mqtt" ,clientID);
-    console.log(client);
+    // console.log(client);
 
 
     client.onConnectionLost = onConnectionLost;
@@ -31,11 +31,13 @@ function startConnect(){
 
 
 function onConnect(){
-    topic =  document.getElementById("topic_s").value;
+    // topic =  document.getElementById("topic_s").value;
+    topic =  "testtopic/userpw";
+    
 
     document.getElementById("messages").innerHTML += "<span> Subscribing to topic "+topic + "</span><br>";
 
-    console.log(topic)
+    // console.log(topic)
     client.subscribe(topic);
 
 }
@@ -50,7 +52,7 @@ function onConnectionLost(responseObject){
 }
 
 function onMessageArrived(message){
-    console.log("OnMessageArrived: "+message.payloadString);
+    // console.log("OnMessageArrived: "+message.payloadString);
     document.getElementById("messages").innerHTML += "<span> Topic:"+message.destinationName+"| Message : "+message.payloadString + "</span><br>";
 }
 
