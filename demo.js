@@ -67,7 +67,8 @@ function startDisconnect(){
 
 function publishMessage(){
 msg = document.getElementById("Message").value;
-topic = document.getElementById("topic_p").value;
+// topic = document.getElementById("topic_p").value;
+    topic =  "testtopic/userpw";
 
 Message = new Paho.MQTT.Message(msg);
 Message.destinationName = topic;
