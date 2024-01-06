@@ -12,7 +12,7 @@ function startConnect(){
 
     // client = new Paho.MQTT.Client(host,Number(port),clientID);
     // client = new Paho.MQTT.Client("wss://mqtt-dashboard.com" ,clientID);
-    client = new Paho.MQTT.Client("wss://broker.emqx.io:8083/mqtt" ,clientID);
+    client = new Paho.MQTT.Client("ws://broker.emqx.io:8083/mqtt" ,clientID);
     console.log(client);
 
 
@@ -23,7 +23,7 @@ function startConnect(){
         onSuccess: onConnect,
 //        userName: userId,
  //       passwordId: passwordId
-        // useSSL: true
+        useSSL: true
     });
 
 
