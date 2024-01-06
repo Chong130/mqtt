@@ -10,8 +10,8 @@ function startConnect(){
     document.getElementById("messages").innerHTML += "<span> Connecting to " + host + "on port " +port+"</span><br>";
     document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID +" </span><br>";
 
-    client = new Paho.MQTT.Client(host,Number(port),clientID);
-    // client = new Paho.MQTT.Client("wss://mqtt.eclipse.org", clientID);
+    // client = new Paho.MQTT.Client(host,Number(port),clientID);
+    client = new Paho.MQTT.Client("wss:/mqtt-dashboard.com", 8884 ,clientID);
 
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
